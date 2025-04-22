@@ -7,6 +7,23 @@ $bg-2: lighten($bg-1, 10%);
 $text-0: lighten($bg-0, 87%);
 $text-1: lighten($bg-0, 60%);
 
+// Colors from old theme (brightened for dark mode to ensure readability)
+$primary-color: #8a9cad; // Much brighter version of primary for dark mode
+$primary-color-dark: #6a7a89; // Slightly darker than primary but still visible
+$primary-color-light: #aabdcf; // Lighter version for contrast
+
+$secondary-color: #5d9fe6; // Brightened blue for dark mode
+$secondary-color-dark: #3d7fc6; // Darker but still visible
+$secondary-color-light: #7db9ff; // Lighter blue 
+
+$tertiary-color: #8ea7b0; // Brightened tertiary for visibility
+$tertiary-color-dark: #6e878f; // Darker but still visible
+$tertiary-color-light: #afc5ce; // Lighter version
+
+$accent-color: #4cc7eb; // Brightened accent cyan for dark mode
+$accent-color-dark: #35afd3; // Still vibrant but slightly darker
+$accent-color-light: #6dd5f5; // Lighter vibrant cyan
+
 :root.dark {
   --text-0: #{$text-0};
   --text-1: #{$text-1};
@@ -17,8 +34,35 @@ $text-1: lighten($bg-0, 60%);
 
   --border-color: var(--bg-2);
 
-  --primary-color: #ef5350;
-  --hover-color: white;
+  /* Neutral Colors */
+  --neutral-white: #ffffff;
+  --neutral-black: #000000;
+  --neutral-gray-light: #bbbbbb;
+  --neutral-gray: #757575;
+  --neutral-gray-dark: #424242;
+
+  /* Colors from old theme */
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --tertiary-color: #{$tertiary-color};
+  --accent-color: #{$accent-color};
+  
+  --primary-color-dark: #{$primary-color-dark};
+  --primary-color-light: #{$primary-color-light};
+  --secondary-color-dark: #{$secondary-color-dark};
+  --secondary-color-light: #{$secondary-color-light};
+  --tertiary-color-dark: #{$tertiary-color-dark};
+  --tertiary-color-light: #{$tertiary-color-light};
+  --accent-color-dark: #{$accent-color-dark};
+  --accent-color-light: #{$accent-color-light};
+  
+  --hover-color: var(--neutral-white);
+
+  /* Status colors from the old theme - brightened for dark mode */
+  --error-color: #f44336;
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --info-color: #29b6f6;
 
   .social > img {
     filter: invert(1);

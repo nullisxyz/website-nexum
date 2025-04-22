@@ -25,6 +25,8 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 1em 0;
+  background-color: var(--bg-0);
+  border-bottom: 1px solid var(--border-color);
 }
 
 header .main {
@@ -133,34 +135,73 @@ h5,
 h6 {
   font-size: 1.2rem;
   margin-top: 2em;
+  color: var(--text-0);
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+h2 {
+  color: var(--secondary-color);
+}
+
+h3 {
+  color: var(--tertiary-color);
 }
 
 h1::before {
-  color: var(--primary-color);
+  color: var(--accent-color);
   content: "# ";
 }
 
 h2::before {
-  color: var(--primary-color);
+  color: var(--accent-color);
   content: "## ";
 }
 
 h3::before {
-  color: var(--primary-color);
+  color: var(--accent-color);
   content: "### ";
 }
 
 h4::before {
-  color: var(--primary-color);
+  color: var(--accent-color);
   content: "#### ";
 }
 
 h5::before {
-  color: var(--primary-color);
+  color: var(--accent-color);
   content: "##### ";
 }
 
 h6::before {
-  color: var(--primary-color);
+  color: var(--accent-color);
   content: "###### ";
+}
+
+/* Dark mode heading color overrides */
+:root.dark .page-header {
+  color: var(--primary-color-light);
+}
+
+:root.dark h1 {
+  color: var(--primary-color);
+}
+
+:root.dark h2 {
+  color: var(--secondary-color);
+}
+
+:root.dark h3 {
+  color: var(--tertiary-color);
+}
+
+:root.dark h1::before,
+:root.dark h2::before,
+:root.dark h3::before,
+:root.dark h4::before,
+:root.dark h5::before,
+:root.dark h6::before {
+  color: var(--accent-color-light);
 }

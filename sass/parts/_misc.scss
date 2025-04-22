@@ -1,132 +1,163 @@
 .primary-color {
-  color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.tertiary-color {
+    color: var(--tertiary-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
 }
 
 .draft-label {
-  color: var(--hover-color);
-  text-decoration: none;
-  padding: 2px 4px;
-  border-radius: 4px;
-  margin-left: 6px;
-  background-color: var(--primary-color);
+    color: var(--neutral-white);
+    text-decoration: none;
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-left: 6px;
+    background-color: var(--accent-color);
 }
 
 ::-moz-selection {
-  background: var(--primary-color);
-  color: var(--hover-color);
-  text-shadow: none;
+    background: var(--accent-color);
+    color: var(--neutral-white);
+    text-shadow: none;
 }
 
 ::selection {
-  background: var(--primary-color);
-  color: var(--hover-color);
+    background: var(--accent-color);
+    color: var(--neutral-white);
 }
 
 p {
-  line-height: 1.5;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
 }
 
 hr {
-  border: 0;
-  border-top: 3px solid var(--border-color);
-  margin: 1em 0;
+    border: 0;
+    border-top: 3px solid var(--border-color);
+    margin: 1.5em 0;
 }
 
 blockquote {
-  border-left: 3px solid var(--primary-color);
-  color: #737373;
-  margin: 0;
-  padding-left: 1em;
+    border-left: 3px solid var(--accent-color);
+    color: var(--text-1);
+    margin: 0;
+    padding-left: 1em;
+    background-color: var(--bg-1);
+    padding: 1em 1em 1em 2em;
+    border-radius: 0 5px 5px 0;
 }
 
 a {
-  border-bottom: 3px solid var(--primary-color);
-  color: inherit;
-  text-decoration: none;
+    border-bottom: 2px solid var(--accent-color);
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.2s ease;
 
-  // Make sure the underline is at the top
-  position: relative; // needed for z-index
-  z-index: 1;
+    // Make sure the underline is at the top
+    position: relative; // needed for z-index
+    z-index: 1;
+}
+
+:root.dark a {
+    color: var(--text-0);
 }
 
 a.zola-anchor {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 a:hover {
-  background-color: var(--primary-color);
-  color: var(--hover-color);
+    background-color: var(--accent-color-light);
+    color: var(--text-0);
+}
+
+:root.dark a:hover {
+    background-color: var(--accent-color);
+    color: var(--neutral-white);
 }
 
 time {
-  color: grey;
+    color: grey;
 }
 
 /* Remove post list padding */
 .list > ul {
-  margin: 0;
-  padding: 1rem 0 0 0;
+    margin: 0;
+    padding: 1rem 0 0 0;
 }
 
 /* Post list */
 .list-item {
-  margin-bottom: 30px;
-  list-style-type: none;
+    margin-bottom: 30px;
+    list-style-type: none;
+    transition: transform 0.2s ease;
+}
+
+.list-item:hover {
+    transform: translateX(5px);
 }
 
 // change the line-through color
 del {
-  text-decoration-color: var(--primary-color);
-  text-decoration-thickness: 3px;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 3px;
 }
 
 @media all and (max-width: 640px) {
-  .post-header {
-    display: grid;
-    grid-template-rows: auto 1fr;
+    .post-header {
+        display: grid;
+        grid-template-rows: auto 1fr;
 
-    h1 {
-      margin-top: 0;
-      // font-size: 130%;
+        h1 {
+            margin-top: 0;
+            // font-size: 130%;
 
-      a {
-        border-bottom: none;
-      }
+            a {
+                border-bottom: none;
+            }
+        }
     }
-  }
 }
 
 /* Post list */
 @media all and (min-width: 640px) {
-  .post-header {
-    display: grid;
-    gap: 1rem;
-    grid-row-gap: 1.5rem;
-    grid-template-columns: auto 1fr;
+    .post-header {
+        display: grid;
+        gap: 1rem;
+        grid-row-gap: 1.5rem;
+        grid-template-columns: auto 1fr;
 
-    h1 {
-      margin: 0;
-      font-size: 130%;
+        h1 {
+            margin: 0;
+            font-size: 130%;
 
-      a {
-        border-bottom: none;
-      }
+            a {
+                border-bottom: none;
+            }
+        }
     }
-  }
 }
 
 /* Remove styling from theme toggle button */
 #dark-mode-toggle {
-  border-bottom: none;
+    border-bottom: none;
 
-  &:hover {
-    background-color: transparent;
-  }
+    &:hover {
+        background-color: transparent;
+    }
 }
 
 .MathJax_Display,
 .MJXc-display,
 .MathJax_SVG_Display {
-  overflow-x: auto;
-  overflow-y: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
 }

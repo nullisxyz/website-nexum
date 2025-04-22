@@ -1,15 +1,28 @@
 table {
   border-spacing: 0;
   border-collapse: collapse;
+  margin: 1.5em 0;
+  width: 100%;
 }
 
 table th {
-  padding: 6px 13px;
-  border: 1px solid #dfe2e5;
-  font-size: large;
+  padding: 10px 15px;
+  border: 1px solid var(--secondary-color-light);
+  font-size: 1.1em;
+  text-align: left;
+  background-color: var(--secondary-color-light);
+  color: var(--text-0);
 }
 
 table td {
-  padding: 6px 13px;
-  border: 1px solid #dfe2e5;
+  padding: 8px 15px;
+  border: 1px solid var(--border-color);
+}
+
+table tr:nth-child(even) {
+  background-color: var(--bg-1);
+}
+
+table tr:hover {
+  background-color: var(--bg-2);
 }

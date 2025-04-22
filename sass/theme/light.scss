@@ -5,6 +5,23 @@ $bg-2: darken($bg-1, 8%);
 $text-0: darken($bg-0, 87%);
 $text-1: darken($bg-0, 60%);
 
+// Colors from old theme
+$primary-color: #080a0d; // Obsidian Black from old theme
+$primary-color-dark: #050607; // Darker shade of primary
+$primary-color-light: #1a1e24; // Lighter shade of primary
+
+$secondary-color: #0d4b84; // Deep Crypto Blue from old theme
+$secondary-color-dark: #083661; // Darker shade of secondary 
+$secondary-color-light: #0d5aa3; // Lighter shade of secondary
+
+$tertiary-color: #2f3e45; // Dark Graphite from old theme
+$tertiary-color-dark: #232f35; // Darker shade of tertiary
+$tertiary-color-light: #3d4f58; // Lighter shade of tertiary
+
+$accent-color: #2b95b8; // Hacker Cyan from old theme
+$accent-color-dark: #207494; // Darker shade of accent
+$accent-color-light: #35a8ce; // Lighter shade of accent
+
 :root.light {
   --text-0: #{$text-0};
   --text-1: #{$text-1};
@@ -15,8 +32,35 @@ $text-1: darken($bg-0, 60%);
 
   --border-color: var(--bg-2);
 
-  --primary-color: #ef5350;
-  --hover-color: white;
+  /* Neutral Colors */
+  --neutral-white: #ffffff;
+  --neutral-black: #000000;
+  --neutral-gray-light: #e0e0e0;
+  --neutral-gray: #9e9e9e;
+  --neutral-gray-dark: #616161;
+
+  /* Colors from old theme */
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --tertiary-color: #{$tertiary-color};
+  --accent-color: #{$accent-color};
+  
+  --primary-color-dark: #{$primary-color-dark};
+  --primary-color-light: #{$primary-color-light};
+  --secondary-color-dark: #{$secondary-color-dark};
+  --secondary-color-light: #{$secondary-color-light};
+  --tertiary-color-dark: #{$tertiary-color-dark};
+  --tertiary-color-light: #{$tertiary-color-light};
+  --accent-color-dark: #{$accent-color-dark};
+  --accent-color-light: #{$accent-color-light};
+  
+  --hover-color: var(--accent-color);
+
+  /* Status colors from the old theme */
+  --error-color: #d32f2f;
+  --success-color: #2e7d32;
+  --warning-color: #f57c00;
+  --info-color: #0288d1;
 
   // invert colour on hover for consistency
   .social :hover {
