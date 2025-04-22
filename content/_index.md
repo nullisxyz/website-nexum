@@ -1,7 +1,9 @@
 +++
-title= "Apollo Theme"
+title= "A decentralisation story"
 template = "homepage.html"
 +++
+
+Developing decentralised applications and services.
 
 Thanks for checking out this theme!
 
