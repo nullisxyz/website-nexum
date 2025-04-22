@@ -4,9 +4,6 @@ date = "2023-01-06"
 
 [taxonomies]
 tags=["example"]
-
-[extra]
-comment = true
 +++
 
 Note: This requires the `mathjax` and `mathjax_dollar_inline_enable` option set to `true` in `[extra]` section.

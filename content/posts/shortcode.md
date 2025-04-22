@@ -4,9 +4,6 @@ date = "2024-06-14"
 
 [taxonomies]
 tags=["example"]
-
-[extra]
-comment = true
 +++
 
 

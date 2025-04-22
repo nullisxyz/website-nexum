@@ -7,7 +7,6 @@ tags=["documentation"]
 
 [extra]
 repo_view = true
-comment = true
 +++
 
 # Site Configuration
@@ -207,37 +206,3 @@ repo_url = "https://github.com/not-matthias/apollo/tree/main/content" # Alternat
 ```
 
 The `repo_url` can be set in the `[extra]` section or in your `config.toml`.
-
-## Comments (`comment`)
-
-Enables or disables the comment system for posts.
-
-- Type: Boolean
-- Default: false
-- Usage: `comment = false`
-
-After making `comment = true` in `[extra]` section of you post, save your script from [Giscus](https://giscus.app) to `templates/_giscus_script.html`.
-When enabled, this allows readers to leave comments on your blog posts. This feature has to be set for each individual post and is not supported at higher levels.
-
-Example configuration in [content/posts/configuration.md](https://github.com/not-matthias/apollo/blob/main/content/posts/configuration.md):
-
-```toml
-+++
-title = "Configuring Apollo"
-
-[extra]
-comment = true
-+++
-```
-
-Comments via [utterances](https://utteranc.es) can be configured in `template/_giscus_script.html` like this:
-
-```html
-<script src="https://utteranc.es/client.js"
-        repo="YOUR_NAME/YOUR_REPO"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-```

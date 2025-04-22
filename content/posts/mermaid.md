@@ -4,9 +4,6 @@ date = "2024-12-26"
 
 [taxonomies]
 tags=["example"]
-
-[extra]
-comment = true
 +++
 
 This Theme supports [mermaid](https://mermaid.js.org/) markdown diagram rendering.
