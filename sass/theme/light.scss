@@ -43,7 +43,7 @@ $accent-color-light: #35a8ce; // Lighter shade of accent
   --primary-color: #{$primary-color};
   --secondary-color: #{$secondary-color};
   --tertiary-color: #{$tertiary-color};
-  --accent-color: #{$accent-color};
+  --accent-color: #{$accent-color-dark};
   
   --primary-color-dark: #{$primary-color-dark};
   --primary-color-light: #{$primary-color-light};
@@ -54,7 +54,7 @@ $accent-color-light: #35a8ce; // Lighter shade of accent
   --accent-color-dark: #{$accent-color-dark};
   --accent-color-light: #{$accent-color-light};
   
-  --hover-color: var(--accent-color);
+  --hover-color: var(--neutral-white);
 
   /* Status colors from the old theme */
   --error-color: #d32f2f;

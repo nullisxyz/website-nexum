@@ -9,13 +9,13 @@
   }
 
   a {
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
     font-family: var(--text-font);
   }
 
   a:hover {
     color: var(--hover-color);
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
   }
 
   a::before {

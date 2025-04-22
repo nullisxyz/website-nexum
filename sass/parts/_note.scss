@@ -99,8 +99,8 @@ summary {
     transition: all 0.2s ease;
 
     &:hover {
-        background-color: var(--accent-color-light);
-        color: var(--text-0);
+        background-color: var(--accent-color);
+        color: var(--neutral-white);
         cursor: pointer;
     }
 }
