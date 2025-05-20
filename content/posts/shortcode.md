@@ -1,7 +1,6 @@
 +++
 title = "Shortcode Example"
 date = "2024-06-14"
-# draft = true
 
 [taxonomies]
 tags=["example"]
