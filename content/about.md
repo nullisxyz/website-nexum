@@ -11,4 +11,4 @@ Nexum seeks to integrate:
 4. Anonymous, spam-proof messaging
 5. Comprehensive SDKs / cross-platform tools strongly focusing on Developer Experience
 
-👉 Are you a crazy rustacean, and and want to contribute to a fast-moving ecosystem? Checkout our [GitHub](https://github.com/nullisxyz/nexum).
+👉 Are you a crazy rustacean, and and want to contribute to a fast-moving ecosystem? Checkout our [GitHub](https://github.com/nxm-rs).

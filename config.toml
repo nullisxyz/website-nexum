@@ -38,5 +38,5 @@ menu = [
 
 socials = [
     { name = "twitter", url = "https://x.com/nxm_rs", icon = "twitter" },
-    { name = "github", url = "https://github.com/nullisxyz/nexum", icon = "github" },
+    { name = "github", url = "https://github.com/nxm-rs", icon = "github" },
 ]
