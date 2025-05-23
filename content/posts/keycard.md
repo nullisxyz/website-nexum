@@ -19,7 +19,7 @@ This is the first in a four-part series on [Keycard](https://keycard.tech), a sm
 
 ## What is Keycard?
 
-[Keycard](https://keycard.tech) is a [JavaCard](https://www.javacard.com/) smart-card Web3 wallet implementation designed for [Status.IM](https://status.im) and built by a team of developers under the umbrella of [IFT](https://free.technology).
+[Keycard](https://keycard.tech) is a [JavaCard](https://www.javacard.com/) smart-card Web3 wallet initially designed for [Status.IM](https://status.im) and built by a team of developers under the umbrella of [IFT](https://free.technology).
 It builds on open technology standards that have been around for many years, such as [ISO 7816](https://www.iso.org/standard/67495.html) and [JavaCard](https://www.javacard.com/) - the very same standards that are powering smart cards used by giants such as Visa, Mastercard, and American Express.
 
 In the smart-card form-factor, Keycard can be used via physical contact with a smart-card reader, or alternatively via an NFC-enabled device.
