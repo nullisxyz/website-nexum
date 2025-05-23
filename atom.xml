@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Nexum</title>
+    <subtitle>Everything, blazing fast and decentralised</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://nxm.rs/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://nxm.rs/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-05-21T00:00:00+00:00</updated>
+    <id>https://nxm.rs/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Keycard: Bringing Banking-Grade Security to Web3 Wallets</title>
+        <published>2025-05-21T00:00:00+00:00</published>
+        <updated>2025-05-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nxm.rs/posts/keycard/"/>
+        <id>https://nxm.rs/posts/keycard/</id>
+        
+        <content type="html" xml:base="https://nxm.rs/posts/keycard/">&lt;h2 id=&quot;introduction&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#introduction&quot; aria-label=&quot;Anchor link for: introduction&quot;&gt;Introduction&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;This is the first in a four-part series on &lt;a href=&quot;https:&#x2F;&#x2F;keycard.tech&quot;&gt;Keycard&lt;&#x2F;a&gt;, a smart-card Web3 wallet implementation. This series will cover the following topics:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;The path to banking the unbanked&lt;&#x2F;strong&gt; (this article)&lt;&#x2F;li&gt;
+&lt;li&gt;A novel approach to hardware wallet protocol security and transaction verification&lt;&#x2F;li&gt;
+&lt;li&gt;Hierarchical accounts - organise your accounts neatly&lt;&#x2F;li&gt;
+&lt;li&gt;Cashcard - mutually authenticated off-chain transactions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;what-is-keycard&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-is-keycard&quot; aria-label=&quot;Anchor link for: what-is-keycard&quot;&gt;What is Keycard?&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;keycard.tech&quot;&gt;Keycard&lt;&#x2F;a&gt; is a &lt;a href=&quot;https:&#x2F;&#x2F;www.javacard.com&#x2F;&quot;&gt;JavaCard&lt;&#x2F;a&gt; smart-card Web3 wallet initially designed for &lt;a href=&quot;https:&#x2F;&#x2F;status.im&quot;&gt;Status.IM&lt;&#x2F;a&gt; and built by a team of developers under the umbrella of &lt;a href=&quot;https:&#x2F;&#x2F;free.technology&quot;&gt;IFT&lt;&#x2F;a&gt;.
+It builds on open technology standards that have been around for many years, such as &lt;a href=&quot;https:&#x2F;&#x2F;www.iso.org&#x2F;standard&#x2F;67495.html&quot;&gt;ISO 7816&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;www.javacard.com&#x2F;&quot;&gt;JavaCard&lt;&#x2F;a&gt; - the very same standards that are powering smart cards used by giants such as Visa, Mastercard, and American Express.&lt;&#x2F;p&gt;
+&lt;p&gt;In the smart-card form-factor, Keycard can be used via physical contact with a smart-card reader, or alternatively via an NFC-enabled device.
+It&#x27;s resilient to tampering and able to function in a wide range of environments.
+It&#x27;s actually a hardware &lt;em&gt;wallet&lt;&#x2F;em&gt;, in the sense that it can withstand the everyday harsh conditions of the real world.
+It&#x27;s arguably the &lt;strong&gt;most resilient hardware wallet&lt;&#x2F;strong&gt; available today - leaning on standards used by financial institutions that have been developed over many years as consumers put the technology through its paces.
+Accidentally took your hardware wallet for a swim? No problem - if it&#x27;s a Keycard.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;where-keycard-currently-stands&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#where-keycard-currently-stands&quot; aria-label=&quot;Anchor link for: where-keycard-currently-stands&quot;&gt;Where Keycard currently stands&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;keycard.tech&quot;&gt;Keycard&lt;&#x2F;a&gt; refers to the JavaCard Web3 wallet implementation.
+It provides a protocol consisting of a secure channel, key management, and signing.
+All the standards for the Keycard communication protocol are open source and &lt;a href=&quot;https:&#x2F;&#x2F;keycard.tech&#x2F;docs&#x2F;&quot;&gt;documented&lt;&#x2F;a&gt;.
+The JavaCard applet source code is published on their &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;keycard-tech&#x2F;status-keycard&quot;&gt;GitHub repository&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;There are two notable areas whereby Keycard differs significantly from other hardware wallets:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;no-exporting-of-seed-phrases&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#no-exporting-of-seed-phrases&quot; aria-label=&quot;Anchor link for: no-exporting-of-seed-phrases&quot;&gt;No exporting of seed phrases&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Keycard does &lt;strong&gt;NOT&lt;&#x2F;strong&gt; allow for exporting of seed phrases and only allows for exporting very select private keys under the (&lt;a href=&quot;https:&#x2F;&#x2F;eips.ethereum.org&#x2F;EIPS&#x2F;eip-1581&quot;&gt;EIP-1581&lt;&#x2F;a&gt;) derivation path. This makes it a secure and convenient solution for managing Web3 accounts - you never have to write down a seedphrase and risk it falling into the wrong hands - but also presents the risk that if you lose your Keycard, access to any funds stored on accounts derived from the Keycard are lost forever.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;no-physical-buttons-and-or-screen&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#no-physical-buttons-and-or-screen&quot; aria-label=&quot;Anchor link for: no-physical-buttons-and-or-screen&quot;&gt;No physical buttons and&#x2F;or screen&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Keycard is a smart-card, which means it has no physical buttons and&#x2F;or screen. It is therefore not possible to review transactions or confirm actions prior to signing. It&#x27;s for this reason that the core developers of Keycard are working on the &lt;a href=&quot;https:&#x2F;&#x2F;keycard.tech&#x2F;keycard-shell&quot;&gt;Keycard Shell&lt;&#x2F;a&gt;, a small form-factor smart-card reader that can be used to interact with the Keycard, and process Web3 transactions via QR code - with a screen to review transactions and confirm actions prior to signing.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;future-innovations&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#future-innovations&quot; aria-label=&quot;Anchor link for: future-innovations&quot;&gt;Future Innovations&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Keycard is just getting started for mainstream adoption. Whilst its current offerings are comparable to other hardware wallets, they only scratch the surface of Keycard&#x27;s full potential.&lt;&#x2F;p&gt;
+&lt;p&gt;Here are three key innovations we&#x27;ll explore in upcoming blog posts:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;1-secure-channel-with-viewers&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#1-secure-channel-with-viewers&quot; aria-label=&quot;Anchor link for: 1-secure-channel-with-viewers&quot;&gt;1. Secure channel with viewers&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Keycard implements its own Secure Channel Protocol, enabling &lt;strong&gt;encrypted&lt;&#x2F;strong&gt; and &lt;strong&gt;integrity protected&lt;&#x2F;strong&gt; communication between the Keycard applet and connected applications. This feature—&lt;strong&gt;not found in other hardware wallets&lt;&#x2F;strong&gt;—can be expanded to allow:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;View-only permissions for &quot;man in the middle&quot; devices&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Unbounded number of verification devices&lt;&#x2F;strong&gt; (mobile apps, web applications, etc.)&lt;&#x2F;li&gt;
+&lt;li&gt;Ability for users to change their security posture dynamically&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;&#x2F;strong&gt;: A Keycard user signing a Safe transaction containing significant funds can elect to use 3 separate devices to verify the transaction before signing, reflecting a heightened security posture for this specific high-value operation.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;2-account-hierarchies-and-non-asset-accounts&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#2-account-hierarchies-and-non-asset-accounts&quot; aria-label=&quot;Anchor link for: 2-account-hierarchies-and-non-asset-accounts&quot;&gt;2. Account hierarchies and non-asset accounts&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;As a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bips&#x2F;blob&#x2F;43d4a1ecec42d0d4160eafb8b7f37c14f279141b&#x2F;bip-0032.mediawiki&quot;&gt;BIP32&lt;&#x2F;a&gt; compatible wallet, Keycard supports hierarchical deterministic wallets. We&#x27;re developing an intuitive &quot;folder and file&quot; structure to manage accounts:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;&#x2F;strong&gt;: A user&#x27;s account hierarchy:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Personal&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Savings&lt;&#x2F;li&gt;
+&lt;li&gt;Current&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Business&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Accounts Payable&lt;&#x2F;li&gt;
+&lt;li&gt;Accounts Receivable&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Benefits of this approach include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Automatic derivation path generation based on account names&lt;&#x2F;li&gt;
+&lt;li&gt;Client-side metadata storage with optional encryption&lt;&#x2F;li&gt;
+&lt;li&gt;Non-asset accounts for messaging (&lt;a href=&quot;https:&#x2F;&#x2F;waku.org&quot;&gt;Waku&lt;&#x2F;a&gt;) and storage (&lt;a href=&quot;https:&#x2F;&#x2F;ethswarm.org&quot;&gt;Swarm&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;3-unbounded-tps-with-mutual-transactions&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#3-unbounded-tps-with-mutual-transactions&quot; aria-label=&quot;Anchor link for: 3-unbounded-tps-with-mutual-transactions&quot;&gt;3. Unbounded TPS with mutual transactions&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Keycard contains multiple applets, including &lt;strong&gt;Cashcard&lt;&#x2F;strong&gt;—a simple, permissionless signer. Our proposed enhancements will create a &lt;strong&gt;mutual transaction system&lt;&#x2F;strong&gt; addressing current limitations:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;smart-contract vault&lt;&#x2F;strong&gt; stores balances of all cashcards&lt;&#x2F;li&gt;
+&lt;li&gt;Balances are also &lt;strong&gt;stored on the card itself&lt;&#x2F;strong&gt; (updated via trusted channels only)&lt;&#x2F;li&gt;
+&lt;li&gt;Cards can mutually authenticate each other before accepting transfers&lt;&#x2F;li&gt;
+&lt;li&gt;System enables &lt;strong&gt;off-chain, offline transactions&lt;&#x2F;strong&gt; without blockchain bottlenecks&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This creates a comprehensive money velocity approach:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Cheap, low-value&lt;&#x2F;strong&gt; point-of-sale transactions through cashcard mutual transactions&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Medium-value&lt;&#x2F;strong&gt; personal savings in PIN-protected Keycard accounts&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;High-value&lt;&#x2F;strong&gt; savings in smart-contract wallets with Keycard sub-accounts as signers&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot;&gt;Conclusion&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Keycard represents an intersection between Web3 and conventional banking technology. By preserving a familiar UX, we can create a seamless transition from traditional banking to Web3. The mutual transaction system eliminates the need for frequent blockchain transactions whilst maintaining the core benefits of security and decentralisation—all abstracted away from everyday users.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
